@@ -1,17 +1,12 @@
 'use strict';
 
 module.exports = (hexo) => {
-<<<<<<< HEAD
-  const isZh = hexo.theme.i18n.languages[0].search(/zh-CN/i) !== -1;
-  if (isZh) {
-=======
-  if (hexo.theme.has_hello) {
-    return;
-  }
+    if (hexo.theme.has_hello) {
+        return;
+    }
 
-  if (hexo.theme.i18n.languages[0].search(/zh-CN/i) !== -1) {
->>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
-    hexo.log.info(`
+    if (hexo.theme.i18n.languages[0].search(/zh-CN/i) !== -1) {
+        hexo.log.info(`
 ------------------------------------------------
 |                                              |
 |     ________  __            _        __      |
@@ -26,8 +21,8 @@ module.exports = (hexo) => {
 |                                              |
 ------------------------------------------------
 `);
-  } else {
-    hexo.log.info(`
+    } else {
+        hexo.log.info(`
 ------------------------------------------------
 |                                              |
 |     ________  __            _        __      |
@@ -42,10 +37,7 @@ module.exports = (hexo) => {
 |                                              |
 ------------------------------------------------
 `);
-  }
+    }
 
-<<<<<<< HEAD
-=======
-  hexo.theme.has_hello = true;
->>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
+    hexo.theme.has_hello = true;
 };
