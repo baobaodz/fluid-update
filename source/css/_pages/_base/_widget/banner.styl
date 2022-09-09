@@ -3,7 +3,10 @@
   position relative
   overflow hidden
   cursor default
+<<<<<<< HEAD
   overflow-wrap break-word
+=======
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
 
   .mask
     position absolute
@@ -11,6 +14,7 @@
     height 100%
     background-color rgba(0, 0, 0, 0.3)
 
+<<<<<<< HEAD
   .page-header
     color #fff
     max-width calc(960px - 6rem)
@@ -20,14 +24,24 @@
     .page-header, .page-header .iconfont
       font-size 0.9rem
 
+=======
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
   &[parallax="true"]
     will-change transform
     -webkit-transform-style preserve-3d
     -webkit-backface-visibility hidden
+<<<<<<< HEAD
 
 if $banner-width-height-ratio > 0
   @media (max-width: unit($banner-width-height-ratio * 100, "vh"))
     header
+=======
+    transition transform .05s ease-out
+
+if $banner-width-height-ratio > 0
+  @media (max-width: unit($banner-width-height-ratio * 100, "vh"))
+    .header-inner
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
       max-height unit(100 / $banner-width-height-ratio, "vw")
 
     #board

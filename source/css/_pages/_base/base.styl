@@ -1,5 +1,6 @@
 @import "_widget/*"
 
+<<<<<<< HEAD
 html, body
   font-size $font-size
   font-family $font-family
@@ -12,19 +13,51 @@ body
   transition color var(--custom-transition-duration) ease-in-out, background-color var(--custom-transition-duration) ease-in-out
   background-color var(--body-bg-color)
   color var(--text-color)
+=======
+html
+  font-size $font-size
+  letter-spacing $letter-spacing
+
+html, body
+  height 100%
+  font-family $font-family
+  overflow-wrap break-word
+
+body
+  transition color .2s ease-in-out, background-color .2s ease-in-out
+  background-color var(--body-bg-color)
+  color var(--text-color)
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
 
   a
     color var(--text-color)
     text-decoration none
     cursor pointer
+<<<<<<< HEAD
     transition color var(--custom-transition-duration) ease-in-out, background-color var(--custom-transition-duration) ease-in-out
+=======
+    transition color .2s ease-in-out, background-color .2s ease-in-out
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
 
     &:hover
       color var(--link-hover-color)
       text-decoration none
       transition color .2s ease-in-out, background-color .2s ease-in-out
 
+<<<<<<< HEAD
 img[srcset]
+=======
+code
+  color inherit
+
+table
+  font-size inherit
+  color var(--post-text-color)
+
+img[lazyload]
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
   object-fit cover
 
 *[align="left"]
@@ -35,3 +68,27 @@ img[srcset]
 
 *[align="right"]
   text-align right
+<<<<<<< HEAD
+=======
+
+::-webkit-scrollbar
+  width 6px
+  height 6px
+
+::-webkit-scrollbar-thumb
+  background-color var(--scrollbar-color)
+  border-radius 6px
+
+  &:hover
+    background-color var(--scrollbar-hover-color)
+
+::-webkit-scrollbar-corner
+  background-color transparent
+
+label
+  margin-bottom 0
+
+i.iconfont
+  font-size 1em
+  line-height 1
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43

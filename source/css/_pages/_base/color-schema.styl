@@ -1,5 +1,9 @@
 :root
+<<<<<<< HEAD
   --color-mode 'light'
+=======
+  --color-mode "light"
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
   --body-bg-color $body-bg-color
   --board-bg-color $board-bg-color
   --text-color $text-color
@@ -9,9 +13,22 @@
   --post-link-color $post-link-color
   --link-hover-color $link-hover-color
   --link-hover-bg-color $link-hover-bg-color
+<<<<<<< HEAD
   --navbar-bg-color $navbar-bg-color
   --navbar-text-color $navbar-text-color
   --custom-transition-duration $custom-transition-duration
+=======
+  --line-color $line-color
+  --navbar-bg-color $navbar-bg-color
+  --navbar-text-color $navbar-text-color
+  --subtitle-color $subtitle-color
+  --scrollbar-color $scrollbar-color
+  --scrollbar-hover-color $scrollbar-hover-color
+  --button-bg-color $button-bg-color
+  --button-hover-bg-color $button-hover-bg-color
+  --highlight-bg-color $highlight-bg-color
+  --inlinecode-bg-color $inlinecode-bg-color
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
 
 dark-colors()
   --body-bg-color $body-bg-color-dark
@@ -23,6 +40,7 @@ dark-colors()
   --post-link-color $post-link-color-dark
   --link-hover-color $link-hover-color-dark
   --link-hover-bg-color $link-hover-bg-color-dark
+<<<<<<< HEAD
   --navbar-bg-color $navbar-bg-color-dark
   --navbar-text-color $navbar-text-color-dark
   --custom-transition-duration $custom-transition-duration
@@ -69,11 +87,29 @@ dark-colors()
   hr
     border-top-color $line-color-dark
     transition border-top-color var(--custom-transition-duration) ease-in-out
+=======
+  --line-color $line-color-dark
+  --navbar-bg-color $navbar-bg-color-dark
+  --navbar-text-color $navbar-text-color-dark
+  --subtitle-color $subtitle-color-dark
+  --scrollbar-color $scrollbar-color-dark
+  --scrollbar-hover-color $scrollbar-hover-color-dark
+  --button-bg-color $button-bg-color-dark
+  --button-hover-bg-color $button-hover-bg-color-dark
+  --highlight-bg-color $highlight-bg-color-dark
+  --inlinecode-bg-color $inlinecode-bg-color-dark
+
+  img
+    -webkit-filter brightness(.9)
+    filter brightness(.9)
+    transition filter .2s ease-in-out
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
 
   .navbar .dropdown-collapse, .top-nav-collapse, .navbar-col-show
     if $navbar-glass-enable
       ground-glass($navbar-glass-px, $navbar-bg-color-dark, $navbar-glass-alpha)
 
+<<<<<<< HEAD
   .note :not(pre) > code
     background-color rgba(27, 31, 35, .05)
 
@@ -94,3 +130,23 @@ dark-colors()
 
 [data-user-color-scheme='dark']
   dark-colors()
+=======
+  .license-box
+    background-color rgba(#3e4b5e, .35)
+    transition background-color .2s ease-in-out
+
+  .gt-comment-admin .gt-comment-content
+    background-color transparent
+    transition background-color .2s ease-in-out
+
+if (hexo-config("dark_mode.enable"))
+  @media (prefers-color-scheme: dark)
+    :root
+      --color-mode "dark"
+
+    :root:not([data-user-color-scheme])
+      dark-colors()
+
+  [data-user-color-scheme="dark"]
+    dark-colors()
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43

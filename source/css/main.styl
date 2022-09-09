@@ -4,9 +4,24 @@
 // --------------------------------------
 
 @import "_variables/base"
+<<<<<<< HEAD
+=======
+for $inject_variable in hexo-config("injects.variable")
+  @import $inject_variable;
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43
 
 @import "_functions/base"
 
 @import "_mixins/base"
+<<<<<<< HEAD
 
 @import "_pages/pages"
+=======
+for $inject_mixin in hexo-config("injects.mixin")
+  @import $inject_mixin;
+
+@import "_pages/pages"
+
+for $inject_style in hexo-config("injects.style")
+  @import $inject_style;
+>>>>>>> 6075f176fcb17d95c6336809ccb96e8258067c43

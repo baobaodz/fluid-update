@@ -3,21 +3,23 @@
 'use strict';
 
 const checkbox = (args) => {
-  args = args[0] === ',' ? args.slice(1) : args;
-  args = args.join(' ').split(',');
-  const text = (args[0] || '').trim();
+    args = args[0] === ',' ? args.slice(1) : args;
+    args = args.join(' ').split(',');
+    const text = (args[0] || '').trim();
 
-  if (text === 'checked' || text === 'true' || text === 'false') {
-    const checked = text === 'checked' || text === 'true';
-    return `<input type="checkbox" disabled ${checked ? 'checked="checked"' : ''}>`;
-  }
-  !text && hexo.log.warn('[Fluid] Checkbox text must be defined!');
+    !text && hexo.log.warn('[Fluid] Checkbox text must be defined!');
 
-  const checked = (args[1] || '').length > 0 && args[1].trim() !== 'false';
-  const inline = (args[2] || '').length > 0 && args[2].trim() !== 'false';
+    if (text === 'checked' || text === 'true' || text === 'false') {
+        const checked = text === 'checked' || text === 'true';
+        return `<input type="checkbox" disabled ${checked ? 'checked="checked"' : ''}>`;
+    }
 
-  return `${!inline ? '<div>' : ''}
-            <input type="checkbox" disabled ${checked ? 'checked="checked"' : ''}>${text}
+    const checked = (args[1] || '').length > 0 && args[1].trim() !== 'false';
+    const inline = (args[2] || '').length > 0 && args[2].trim() !== 'false';
+    const enabled = (args[3] || '').length > 0 && args[3].trim() === 'false';
+
+    return `${!inline ? '<div>' : ''}
+            <input type="checkbox" ${enabled ? '' : 'disabled'} ${checked ? 'checked="checked"' : ''}>${text}
           ${!inline ? '</div>' : ''}`;
 
 };
